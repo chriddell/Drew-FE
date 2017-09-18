@@ -42,7 +42,8 @@ gulp.task( 'sass:dev', function(){
 
 	return gulp.src( cssDir + '/scss/**/*.scss')
 		.pipe( sass({ 
-				outputStyle: 'expanded' 
+				outputStyle: 'expanded',
+				includePaths: [ 'node_modules/susy/sass' ]
 			})
 			.on( 'error', sass.logError )
 		)
@@ -58,8 +59,11 @@ gulp.task( 'sass:dist', function(){
 
 	return gulp.src( cssDir + '/scss/**/*.scss')
 		.pipe(
-			sass( { outputStyle: 'compact' } )
-				.on( 'error', sass.logError )
+			sass({ 
+				outputStyle: 'compact',
+				includePaths: [ 'node_modules/susy/sass' ]
+			 })
+			.on( 'error', sass.logError )
 		)
 		.pipe( autoprefixer({
 				browsers: [ 'last 2 versions' ],
