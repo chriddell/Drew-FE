@@ -16,11 +16,11 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "jshint": "^2.9.5",
-    "pump": "^1.0.2"
+    "pump": "^1.0.2",
+    "jshint-stylish": "^2.2.1",
+    "gulp-autoprefixer": "^4.0.0"
   },
   "dependencies": {
-    "gulp-autoprefixer": "^4.0.0",
-    "jshint-stylish": "^2.2.1",
     "susy": "^3.0.0"
   },
   "author": "",
