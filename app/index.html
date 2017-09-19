@@ -4,82 +4,102 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>drew expeditions</title>
+	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div id="page-wrap">
 		<header class="l-header c-header c-hero">
 			<div class="l-wrapper">
-				<h1 class="c-header__title">drew expeditions</h1>
-				<nav class="c-nav c-header__nav">
-					<ul class="c-nav__menu">
-						<li class="c-nav__menu-item"><a class="c-nav__menu-link" href="#0">Our expeditions</a></li>
-						<li class="c-nav__menu-item"><a class="c-nav__menu-link" href="#0">FAQ</a></li>
-						<li class="c-nav__menu-item"><a class="c-nav__menu-link" href="#0">Apply</a></li>
-					</ul>
-				</nav>
-				<h1 class="c-hero__title">Expedition Application</h1>
+				<div class="l-row">
+					<div class="l-col-8">
+						<h1 class="c-header__title u-bold">drew expeditions</h1>
+					</div>
+					<div class="l-col-4-last">
+						<nav class="c-nav c-header__nav">
+							<button class="c-hamburger c-nav__menu-trigger" id="toggle-nav-menu">
+								<span class="c-hamburger-box">
+									<span class="c-hamburger-inner">
+										<span class="u-sr-only">Open Menu</span>
+									</span>
+								</span>
+							</button>
+							<ul class="c-nav__menu u-reset-list" id="nav-menu">
+								<li class="c-nav__menu-item u-lowercase"><a class="c-nav__menu-link u-bold" href="#0">Our expeditions</a></li>
+								<li class="c-nav__menu-item"><a class="c-nav__menu-link u-bold" href="#0">FAQ</a></li>
+								<li class="c-nav__menu-item is-active u-lowercase"><a class="c-nav__menu-link u-bold" href="#0">Apply</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="l-row">
+					<h1 class="c-hero__title">Expedition Application</h1>
+				</div>
 			</div>
 		</header>
 		<main class="l-site-main">
 			<div class="l-wrapper">
-				<div class="l-main">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum earum libero cupiditate asperiores deserunt ad excepturi enim maxime, tempore, nihil rerum possimus obcaecati! Provident, ratione debitis nobis ex <a href="#0">ipsam corrupti</a>.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptatum, dicta dolorum consequatur laboriosam mollitia, reiciendis possimus impedit a assumenda eos nihil fugit ipsum quo dolores dolor voluptatem, vero? Deserunt.</p>
-					<h3>Register your interest</h3>
-					<form action="" class="c-form">
-						<span class="c-input-group">
-							<label for="fname">First Name</label>
-							<input class="c-input c-input--text" type="text" name="fname">
-						</span>
-						<span class="c-input-group">
-							<label for="sname">Last Name</label>
-							<input class="c-input c-input--text" type="text" name="sname">
-						</span>
-						<span class="c-input-group">
-							<label for="email">Email Address</label>
-							<input class="c-input c-input--text" type="text" name="email">
-						</span>
-						<span class="c-input-group">
-							<label for="telephone">Phone Number</label>
-							<input class="c-input c-input--text" type="text" name="telephone">
-						</span>
-						<span class="c-input-group">
-							<label class="c-label" for="expedition">Expedition you're interested in</label>
-							<select class="c-input c-input--select" name="expedition">
-								<option value="" disabled selected hidden>Select expedition</option>
-								<option value="1">Exp. one</option>
-								<option value="2">Exp. two</option>
-								<option value="3">Exp. three</option>
-							</select>
-						</span>
-						<span class="c-input-group">
-							<label class="c-label c-label--optional" for="another">Another dropdown</label>
-							<select class="c-input c-input--select" name="another">
-								<option value="" disabled selected hidden>Select something</option>
-								<option value="1">One</option>
-								<option value="2">Two</option>
-								<option value="3">Three</option>
-							</select>
-						</span>
-						<span class="c-input-group">
-							<input class="c-input c-input--submit c-btn" type="submit" value="Send application">
-						</span>
-					</form>
+				<div class="l-row">
+					<div class="l-main l-col-12 l-col-med-8">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum earum libero cupiditate asperiores deserunt ad excepturi enim maxime, tempore, nihil rerum possimus obcaecati! Provident, ratione debitis nobis ex <a href="#0">ipsam corrupti</a>.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptatum, dicta dolorum consequatur laboriosam mollitia, reiciendis possimus impedit a assumenda eos nihil fugit ipsum quo dolores dolor voluptatem, vero? Deserunt.</p>
+						<h2>Register your interest</h2>
+						<form action="" class="c-form">
+							<span class="c-input-group">
+								<label for="fname">First Name</label>
+								<input class="c-input c-input--text" type="text" name="fname">
+							</span>
+							<span class="c-input-group">
+								<label for="sname">Last Name</label>
+								<input class="c-input c-input--text" type="text" name="sname">
+							</span>
+							<span class="c-input-group">
+								<label for="email">Email Address</label>
+								<input class="c-input c-input--text" type="text" name="email">
+							</span>
+							<span class="c-input-group">
+								<label for="telephone">Phone Number</label>
+								<input class="c-input c-input--text" type="text" name="telephone">
+							</span>
+							<span class="c-input-group">
+								<label class="c-label" for="expedition">Expedition you're interested in</label>
+								<select class="c-input c-input--select" name="expedition">
+									<option value="" disabled selected hidden>Select expedition</option>
+									<option value="1">Exp. one</option>
+									<option value="2">Exp. two</option>
+									<option value="3">Exp. three</option>
+								</select>
+							</span>
+							<span class="c-input-group">
+								<label class="c-label c-label--optional" for="another">Another dropdown</label>
+								<select class="c-input c-input--select" name="another">
+									<option value="" disabled selected hidden>Select something</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</span>
+							<span class="c-input-group">
+								<input class="c-input c-input--submit c-btn" type="submit" value="Send application">
+							</span>
+						</form>
+					</div>
+					<aside class="l-sidebar l-col-12 l-col-med-4-last">
+						<a class="c-block" href="#0">
+							<h3 class="c-block__title u-like-h2">Our Expeditions</h3>
+						</a>
+						<a class="c-block" href="#0">
+							<h3 class="c-block__title u-like-h2">FAQ</h3>
+						</a>
+					</aside>
 				</div>
-				<aside class="l-sidebar">
-					<a class="c-block" href="#0">
-						<h3 class="c-block__title">Our Expeditions</h3>
-					</a>
-					<a class="c-block" href="#0">
-						<h3 class="c-block__title">FAQ</h3>
-					</a>
-				</aside>
 			</div>
 		</main>
 		<footer class="l-footer">
 			<div class="l-wrapper">
-				<p>&copy; drew expedtiions</p>
+				<div class="l-row">
+					<p>&copy; drew expedtiions</p>
+				</div>
 			</div>
 		</footer>
 	</div>

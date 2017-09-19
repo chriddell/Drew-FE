@@ -1,1 +1,15 @@
 // _settings.scss
+
+$baseFontFamily: 'Karla', 'Helvetica', 'Arial', sans-serif;
+
+$colorsMap: (
+	'light' 						: #FFFFFF,
+	'highlight' 				: #23A0C7,
+	'highlight-darker'	: darken( #23A0C7, 30% ),
+	'text'							: #383838
+);
+
+$breakpointsMap: (
+  'tablet'    					: 767px,
+  'desktop'							: 1025px
+);

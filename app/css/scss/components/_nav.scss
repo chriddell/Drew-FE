@@ -1,1 +1,75 @@
 // _nav.scss
+
+.c-nav__menu {
+	width: 100%;
+	height: 100%;
+
+	padding: 20px;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+
+	background-color: map-get( $colorsMap, 'highlight-darker' );
+
+	transform: translateX( 100% );
+
+	transition: transform 0.75s ease;
+
+	@extend %u-clearfix;
+
+	@include respond-to( 'tablet' ) {
+		padding: 0;
+
+		position: static;
+
+		background-color: transparent;
+	
+		transform: none;
+	}
+
+	&.is-active {
+		transform: translateX(0);
+	}
+}
+
+.c-nav__menu-item {
+	padding: 10px 0;
+
+	@extend %like-h2;
+
+	@include respond-to( 'tablet' ) {
+		padding: 0;
+
+		float: left;
+
+		font-size: 1.5em;
+	}
+
+	&:not(:last-of-type) {
+		margin-right: 30px;
+	}
+
+	&.is-active {
+
+		@include respond-to( 'tablet' ) {
+			padding-bottom: 5px;
+
+			border-bottom: 3px solid;
+		}
+	}
+}
+
+.c-nav__menu-link {
+	color: map-get( $colorsMap, 'light' );
+	text-decoration: none;
+}
+
+.c-nav__menu-trigger {
+	float: right;
+
+	@include respond-to( 'tablet' ) {
+		display: none;
+	}
+}

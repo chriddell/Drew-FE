@@ -16,4 +16,86 @@ $susy: (
 	margin: 0 auto;
 
 	box-sizing: content-box;
+
+	@extend %u-clearfix;
+}
+
+/**
+ * Create handy grid classes, 
+ * as well as push/pull (spacer)
+ * classes
+ */
+
+@for $i from 1 through length( susy-get( 'columns' ) ) {
+  .l-col-#{$i} {
+    width: span( $i );
+
+    padding-right: gutter();
+  }
+
+  .l-col-#{$i}-last {
+    width: span( $i wide );
+
+    padding: 0;
+
+    float: right;
+  }
+
+  .l-push-#{$i} {
+    margin-left: span( $i );
+  }
+}
+
+@for $i from 1 through length( susy-get( 'columns' ) ) {
+  .l-col-med-#{$i} {
+    @include respond-to( 'tablet' ) {
+      width: span( $i );
+
+    	padding-right: gutter();
+    }
+  }
+
+  .l-col-med-#{$i}-last {
+    @include respond-to( 'tablet' ) {
+      width: span( $i wide );
+
+      padding: 0;
+
+      float: right;
+    }
+  }
+
+  .l-push-med-#{$i} {
+    @include respond-to( 'tablet' ) {
+      margin-left: span( $i );
+    }
+  }
+}
+
+@for $i from 1 through length( susy-get( 'columns' ) ) {
+  .l-col-lrg-#{$i} {
+    @include respond-to( 'desktop' ) {
+      width: span( $i );
+
+      padding: 0;
+
+    	padding-right: gutter();
+    }
+  }
+
+  .l-col-lrg-#{$i}-last {
+    @include respond-to( 'desktop' ) {
+      width: span( $i wide );
+
+      padding: 0;
+
+      float: right;
+    }
+  }
+
+  .l-push-lrg-#{$i} {
+    @include respond-to( 'desktop' ) {
+      margin-left: span( $i );
+    }
+  }
 }

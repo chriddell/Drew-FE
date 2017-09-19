@@ -1,1 +1,53 @@
 // _utils.scss
+
+.u-like-h1 {
+	@extend %like-h1;
+}
+
+.u-like-h2 {
+	@extend %like-h2;
+}
+
+.u-like-h3 {
+	@extend %like-h3;
+}
+
+.u-reset-list,
+%u-reset-list {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.u-clearfix,
+%u-clearfix {
+	&:after {
+		content: "";
+
+  	display: table;
+  	clear: both;
+	}
+}
+
+.u-sr-only,
+%u-sr-only {
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.u-bold,
+%u-bold {
+	font-weight: bold;
+}
+
+.u-lowercase,
+%u-lowercase {
+	text-transform: lowercase;
+}

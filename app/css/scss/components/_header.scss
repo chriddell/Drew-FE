@@ -1,1 +1,17 @@
 // _header.scss
+
+.c-header {
+	padding-top: 20px;
+	
+	color: map-get( $colorsMap, 'light' );
+
+	@include respond-to( 'tablet' ) {
+		padding-top: 40px;
+	}
+}
+
+.c-header__title {	
+	margin: 0;
+
+	font-size: 1.5em;
+}
