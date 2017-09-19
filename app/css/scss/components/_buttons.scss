@@ -1,1 +1,14 @@
 // _buttons.scss
+
+.c-btn {
+	background-color: map-get( $colorsMap, 'highlight' );
+	background-image: url( ../media/button-bg.svg );
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: auto 100%;
+
+	color: map-get( $colorsMap, 'lightest' );
+	font-weight: bold;
+
+	cursor: pointer;
+}
