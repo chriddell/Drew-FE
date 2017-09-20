@@ -5,17 +5,12 @@
 	min-height: 250px;
 	max-height: 100vh;
 	
-	background-image: url( ../media/hero-bg-mobile.jpg );
 	background-size: cover;
 	background-position: center 90%;
 	background-color: map-get( $colorsMap, 'highlight' );
+	// background-image is set with HTML/JS for lazy-loading
 
 	position: relative;
-
-	@include respond-to( 'tablet' ) {
-		background-image: url( ../media/hero-bg.jpg );
-		@include image-2x( '../media/hero-bg@2x.jpg' );
-	}
 
 	&:before {
 		content: '';
