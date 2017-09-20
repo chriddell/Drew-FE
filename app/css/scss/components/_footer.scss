@@ -1,0 +1,14 @@
+// _footer.scss
+
+.c-footer {
+	margin-top: 1em;
+	padding: 1em 0;
+	border-top: 1px solid map-get( $colorsMap, 'light' );
+
+	font-size: 1.25em;
+	text-align: center;
+}
+
+.c-footer-text {
+	margin: 0;
+}

@@ -1,1 +1,67 @@
 // _base.scss
+
+* {
+	margin-top: 0;
+	
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $baseFontFamily;
+	font-size: 16px;
+	color: map-get( $colorsMap, 'text' );
+	-webkit-font-smoothing: antialiased;
+}
+
+p {
+	margin-bottom: 1.5em;
+
+	line-height: 1.45em;
+}
+
+p > a {
+	font-weight: bold;
+	color: map-get( $colorsMap, 'highlight' );
+	text-decoration: none;
+}
+
+h1,
+%like-h1,
+h2,
+%like-h2,
+h3,
+%like-h3 {
+	font-weight: normal;
+}
+
+h1,
+%like-h1 {
+	font-size: 2em;
+
+	@include respond-to( 'tablet' ) {
+		font-size: 3em;
+	}
+}
+
+h2,
+%like-h2 {
+	font-size: 1.5em;
+
+	@include respond-to( 'tablet' ) {
+		font-size: 2em;
+	}
+}
+
+h3,
+%like-h3 {
+	font-size: 1.15em;
+
+	@include respond-to( 'tablet' ) {
+		font-size: 1.5em;
+	}
+}
+
+::selection {
+	background-color: #000000;
+	color: #FFFFFF;
+}

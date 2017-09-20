@@ -25,21 +25,21 @@
 	&:after {
 		content: "";
 
-  	display: table;
-  	clear: both;
+		display: table;
+		clear: both;
 	}
 }
 
 .u-sr-only,
 %u-sr-only {
 	position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
 }
 
 .u-bold,
@@ -50,4 +50,9 @@
 .u-lowercase,
 %u-lowercase {
 	text-transform: lowercase;
+}
+
+.u-text-center,
+%u-text-center {
+	text-align: center;
 }

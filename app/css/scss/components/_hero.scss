@@ -2,21 +2,35 @@
 
 .c-hero {
 	height: 430px;
-	height: 100vh;
-
+	min-height: 250px;
+	max-height: 100vh;
+	
+	background-image: url( ../media/hero-bg-mobile.jpg );
+	background-size: cover;
+	background-position: center 90%;
 	background-color: map-get( $colorsMap, 'highlight' );
 
 	position: relative;
 
 	@include respond-to( 'tablet' ) {
-		height: 430px;
+		background-image: url( ../media/hero-bg.jpg );
+		@include image-2x( '../media/hero-bg@2x.jpg' );
+	}
+
+	&:before {
+		content: '';
+
+		height: 100%;
+
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+
+		background: linear-gradient( rgba( 0, 0, 0, 0.75 ) 5%, transparent 95% );
 	}
 }
 
 .c-hero__title {
-	// absolute center
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	width: 100%;
+
+	@include centered();
 }

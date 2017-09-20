@@ -11,6 +11,8 @@ $colorsMap: (
 );
 
 $breakpointsMap: (
-  'tablet'    					: 767px,
-  'desktop'							: 1025px
+	'tablet'    					: 767px,
+	'desktop'							: 1025px
 );
+
+$transitionDuration: 0.5s;

@@ -14,6 +14,10 @@
 	line-height: 0;
 
 	cursor: pointer;
+
+	&:focus {
+		outline: 0;
+	}
 }
 
 .c-hamburger-box {
@@ -39,7 +43,7 @@
 
 		position: absolute;
 
-		background-color: map-get( $colorsMap, 'light' );
+		background-color: map-get( $colorsMap, 'lightest' );
 	}
 
 	&:before,
@@ -58,37 +62,44 @@
 	}
 }
 
-// Closed (active)
-
-.c-hamburger.is-active {
-	position: fixed;
-	top: 20px; // pseudo .c-header padding
-	right: 20px; // psuedo .l-wrapper padding
-	z-index: 100; // keep above menu
-
+/*
+ * Collapse
+ */
+.c-hamburger--collapse {
 	.c-hamburger-inner {
-		transform: rotate(45deg);
+  	top: auto;
+  	bottom: 0;
+  	transition-duration: 0.13s;
+  	transition-delay: 0.13s;
+  	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+ 	}
 
-		&:before {
-			top: 0;
-			opacity: 0;
-		}
+ 	.c-hamburger-inner:after {
+    top: -20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; 
+  }
 
-		&:after {
-			bottom: 0;
-			transform: rotate(-90deg);
-		}
-	}
+  .c-hamburger-inner:before {
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+  }
 }
 
-// Coloured
-
-.c-hamburger--bright {
+.c-hamburger--collapse.is-active {
 	.c-hamburger-inner {
-		&,
-		&:before,
-		&:after {
-			background-color: map-get($colorsMap, 'bright');
-		}
-	}
+  	transform: translate3d(0, -10px, 0) rotate(-45deg);
+  	transition-delay: 0.22s;
+  	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); 
+  }
+
+  .c-hamburger-inner:after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; 
+  }
+
+	.c-hamburger-inner:before {
+    top: 0;
+    transform: rotate(-90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); 
+  }
 }

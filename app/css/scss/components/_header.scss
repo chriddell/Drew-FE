@@ -3,11 +3,20 @@
 .c-header {
 	padding-top: 20px;
 	
-	color: map-get( $colorsMap, 'light' );
+	color: map-get( $colorsMap, 'lightest' );
 
 	@include respond-to( 'tablet' ) {
 		padding-top: 40px;
 	}
+}
+
+.c-header__title,
+.c-header__nav {
+	position: relative;
+}
+
+.c-header__nav {
+	float: right;
 }
 
 .c-header__title {	

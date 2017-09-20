@@ -4,7 +4,7 @@
 
 $susy: (
 	'columns'						: susy-repeat( 12 ),
-	'gutters'						: 0.25,
+	'gutters'						: 0.8,
 	'spread'						: 'narrow',
 	'container-spread'	: 'narrow',
 );
@@ -26,76 +26,84 @@ $susy: (
  * classes
  */
 
-@for $i from 1 through length( susy-get( 'columns' ) ) {
-  .l-col-#{$i} {
-    width: span( $i );
-
-    padding-right: gutter();
-  }
-
-  .l-col-#{$i}-last {
-    width: span( $i wide );
-
-    padding: 0;
-
-    float: right;
-  }
-
-  .l-push-#{$i} {
-    margin-left: span( $i );
-  }
+*[class*="l-col"] {
+	float: left;
 }
 
 @for $i from 1 through length( susy-get( 'columns' ) ) {
-  .l-col-med-#{$i} {
-    @include respond-to( 'tablet' ) {
-      width: span( $i );
+	.l-col-#{$i} {
+		width: span( $i );
 
-    	padding-right: gutter();
-    }
-  }
+		@if ( $i != 12 ) {
+			padding-right: gutter();
+		}
+	}
 
-  .l-col-med-#{$i}-last {
-    @include respond-to( 'tablet' ) {
-      width: span( $i wide );
+	.l-col-#{$i}-last {
+		width: span( $i wide );
 
-      padding: 0;
+		padding: 0;
 
-      float: right;
-    }
-  }
+		float: right;
+	}
 
-  .l-push-med-#{$i} {
-    @include respond-to( 'tablet' ) {
-      margin-left: span( $i );
-    }
-  }
+	.l-push-#{$i} {
+		margin-left: span( $i );
+	}
 }
 
 @for $i from 1 through length( susy-get( 'columns' ) ) {
-  .l-col-lrg-#{$i} {
-    @include respond-to( 'desktop' ) {
-      width: span( $i );
+	.l-col-med-#{$i} {
+		@include respond-to( 'tablet' ) {
+			width: span( $i );
 
-      padding: 0;
+			@if ( $i != 12 ) {
+				padding-right: gutter();
+			}
+		}
+	}
 
-    	padding-right: gutter();
-    }
-  }
+	.l-col-med-#{$i}-last {
+		@include respond-to( 'tablet' ) {
+			width: span( $i wide );
 
-  .l-col-lrg-#{$i}-last {
-    @include respond-to( 'desktop' ) {
-      width: span( $i wide );
+			padding: 0;
 
-      padding: 0;
+			float: right;
+		}
+	}
 
-      float: right;
-    }
-  }
+	.l-push-med-#{$i} {
+		@include respond-to( 'tablet' ) {
+			margin-left: span( $i );
+		}
+	}
+}
 
-  .l-push-lrg-#{$i} {
-    @include respond-to( 'desktop' ) {
-      margin-left: span( $i );
-    }
-  }
+@for $i from 1 through length( susy-get( 'columns' ) ) {
+	.l-col-lrg-#{$i} {
+		@include respond-to( 'desktop' ) {
+			width: span( $i );
+
+			@if ( $i != 12 ) {
+				padding-right: gutter();
+			}
+		}
+	}
+
+	.l-col-lrg-#{$i}-last {
+		@include respond-to( 'desktop' ) {
+			width: span( $i wide );
+
+			padding: 0;
+
+			float: right;
+		}
+	}
+
+	.l-push-lrg-#{$i} {
+		@include respond-to( 'desktop' ) {
+			margin-left: span( $i );
+		}
+	}
 }

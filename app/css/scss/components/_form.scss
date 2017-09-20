@@ -12,7 +12,7 @@
 	margin-bottom: 1em;
 
 	@include respond-to( 'tablet' ) {
-		margin-bottom: 1.25em;
+		margin-bottom: 1.5em;
 	}
 }
 
@@ -28,16 +28,26 @@
 	font-family: $baseFontFamily;
 }
 
+.c-input--text {
+	transition: background-color $transitionDuration;
+}
+
+.c-input--text:focus {
+	outline: 0;
+	background-color: rgba( map-get( $colorsMap, 'light' ), 0.25 );
+}
+
 .c-input--select {
 	background-image: url( ../media/spearhead-down.png );
 	background-color: transparent;
 	background-repeat: no-repeat;
+	background-size: 12px 8px;
 	background-position: 95% center; // backup for non-calc
 	background-position: calc( 100% - 0.75em ) center; // use calc() to psuedo padding
 
 	-webkit-appearance: none;
 
-	@include image-2x( '../media/spearhead-down@2x.png', 12px, 8px );
+	@include image-2x( '../media/spearhead-down@2x.png' );
 }
 
 .c-input--submit {
@@ -57,9 +67,13 @@
 // Labels
 
 .c-label {
-	margin-bottom: 0.25em;
+	margin-bottom: 0.5em;
 
 	display: block;
+}
 
-	font-size: 0.95em;
+.c-label--optional:after {
+	content: '(optional)';
+
+	float: right;
 }

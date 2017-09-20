@@ -1,0 +1,60 @@
+// _block.scss
+
+.c-block {
+	height: 240px;
+
+	margin-bottom: 1.25em;
+
+	display: block;
+
+	position: relative;
+		
+	background-color: map-get( $colorsMap, 'highlight-darker' );
+
+	color: map-get( $colorsMap, 'lightest' );
+	text-align: center;
+
+	overflow: hidden;
+}
+
+.c-block__inner {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+
+	background-size: cover;
+	background-position: center center;
+
+	transition: transform $transitionDuration;
+}
+.c-block--faq__inner {
+	background-image: url( ../media/block-faq-bg.jpg );
+
+	@include respond-to( 'tablet' ) {
+		@include image-2x( '../media/block-faq-bg@2x.jpg' );
+	}
+}
+.c-block--expeditions__inner {
+	background-image: url( ../media/block-expeditions-bg.jpg );
+
+	@include respond-to( 'tablet' ) {
+		@include image-2x( '../media/block-expeditions-bg@2x.jpg' );
+	}
+}
+
+.c-block__title {
+	width: 100%;
+
+	padding: 0 1em;
+	margin: 0;
+
+	@extend %like-h2;
+
+	@include centered();
+	z-index: 2;
+}
+
+// Hover states
+.c-block:hover .c-block__inner,
+.c-block:focus .c-block__inner {
+	transform: scale(1.1);
+}

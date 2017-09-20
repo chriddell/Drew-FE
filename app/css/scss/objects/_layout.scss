@@ -1,17 +1,23 @@
 // _layout.scss
 
 [class*="l-col"] {
-  float: left;
-
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 [class*="l-"] {
-  display: block;
+	display: block;
 
-  @extend %u-clearfix;
+	@extend %u-clearfix;
 }
 
 .l-site-main {
 	padding-top: 40px;
+}
+
+.l-main {
+	margin-bottom: 2em;
+
+	@include respond-to( 'tablet' ) {
+		margin-bottom: 0;
+	}
 }
