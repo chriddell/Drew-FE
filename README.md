@@ -1,5 +1,7 @@
 # Drew FE-Code Test
 
+To rebuild the application, remove the 'dist' folder and then run 'gulp dist' in the terminal (after npm install -ing).
+
 ## Code Structure
 
 I've split my code into two top-level folders: app + dist.
@@ -32,6 +34,7 @@ A further breakdown of the code structure below:
 - I optmized these manually from Photoshop rather than in a build step. This allows more control over how they will appear in browser I think. I also added the faded overlay on the sidebar blocks in Photoshop because it allowed me to optimize the images to a smaller size.
 - I optimized the SVG using SVGO https://github.com/svg/svgo
 - I chose to lazyload the hero image as I didn't want to reduce it's quality too much.
+- I wouldn't normally push a media folder to Git, but in this instance I think it's acceptable!
 
 I think the above covers most of my decisions within the code. The rest should be self-explanatory after looking through the files!
 
