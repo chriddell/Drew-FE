@@ -46,6 +46,7 @@
 	background-position: calc( 100% - 0.75em ) center; // use calc() to psuedo padding
 
 	-webkit-appearance: none;
+	-moz-appearance: none;
 
 	@include image-2x( '../media/spearhead-down@2x.png' );
 }
