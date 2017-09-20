@@ -19,6 +19,7 @@ const gulp 					= require( 'gulp' ),
 const appDir		= 'app',
 			cssDir		= appDir + '/css',
 			jsDir			= appDir + '/js',
+			mediaDir	= appDir + '/media',
 			buildDir	= 'dist';
 
 // Watch / Browser-sync
@@ -60,7 +61,7 @@ gulp.task( 'sass:dist', function(){
 	return gulp.src( cssDir + '/scss/**/*.scss')
 		.pipe(
 			sass({ 
-				outputStyle: 'compact',
+				outputStyle: 'compressed',
 				includePaths: [ 'node_modules/susy/sass' ]
 			 })
 			.on( 'error', sass.logError )
@@ -95,11 +96,18 @@ gulp.task( 'compress', [ 'js' ], function(){
 
 // Copy (HTML & media)
 
-gulp.task( 'copy', function(){
+gulp.task( 'copy', [ 'sass:dist' ], function(){
 
 	gulp.src( appDir + '/index.html' )
 		.pipe( replace( 'css/style.css', 'style.min.css' ) )
 		.pipe( replace( 'js/app.js', 'app.min.js' ) )
+		.pipe( gulp.dest( buildDir ) );
+
+	gulp.src( mediaDir + '/*' )
+		.pipe( gulp.dest( buildDir + '/media' ) );
+
+	gulp.src( buildDir + '/style.min.css' )
+		.pipe( replace( '../media/', 'media/' ) )
 		.pipe( gulp.dest( buildDir ) );
 });
 
