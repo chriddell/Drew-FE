@@ -56,3 +56,13 @@
 %u-text-center {
 	text-align: center;
 }
+
+// added by JS
+
+.js-no-scroll,
+%js-no-scroll {
+	height: 100%;
+	width: 100%;
+
+	overflow: hidden;
+}

@@ -88,12 +88,14 @@
 .c-nav__menu-trigger {
 	float: right;
 
-	position: fixed;
-	top: 20px; // pseudo .c-header padding
-	right: 20px; // psuedo .l-wrapper padding
-	z-index: 3;
-
 	@include respond-to( 'tablet' ) {
 		display: none;
+	}
+
+	&.is-active {
+		position: fixed;
+		top: 20px; // pseudo .c-header padding
+		right: 20px; // psuedo .l-wrapper padding
+		z-index: 3;
 	}
 }

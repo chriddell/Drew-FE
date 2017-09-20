@@ -36,6 +36,12 @@
   text-align: center;
 }
 
+.js-no-scroll {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 /* Document
    ========================================================================== */
 /**
@@ -1585,16 +1591,19 @@ h3,
 
 .c-nav__menu-trigger {
   float: right;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 3;
 }
 
 @media (min-width: 767px) {
   .c-nav__menu-trigger {
     display: none;
   }
+}
+
+.c-nav__menu-trigger.is-active {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
 }
 
 .c-header {
